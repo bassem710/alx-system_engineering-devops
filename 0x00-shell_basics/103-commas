@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 --group-directories-first | tr '\n' ',' | sed 's/,$/\n/'
+find . -maxdepth 1 -print | LC_ALL=C sort --ignore-case --field-separator= -t/ -k2 | sed 's/^\.\//.\//' | tr '\n' ',' | sed 's/,$/\n/'
