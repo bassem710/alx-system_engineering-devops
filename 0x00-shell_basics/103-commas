@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -print | LC_ALL=C sort --ignore-case --field-separator= -t/ -k2 | sed 's/^\.\//.\//' | tr '\n' ',' | sed 's/,$/\n/'
+ls -mpa
